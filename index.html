@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src='js/jquery-3.1.1.min.js'></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<script src='js/code.js'></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+   
+	<div class="col-md-12">
+		<div class="col-md-12">
+			<h1 class="col-md-12">Search Repositories</h1>
+		</div>
+		<div class="col-md-12">
+			<div class="col-md-4">
+				<input type="text" name="terms" class="form-control"  id="searchTerms" >
+
+			</div>
+			<div class="col-md-8">
+				<a href="#" >Search</a>
+			</div>
+		</div>
+		<br>
+		<div class="col-md-12">
+			<div class='col-md-6'>
+				<img id='imgLoading' src="images/loading.gif" hidden >
+				<br>
+				<div class="alert alert-danger" id="error" hidden>
+					Error! couldn't find your search.
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div id="result" class="col-md-12"></div>
+		</div>
+	</div>
+</body>
+</html>
