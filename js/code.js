@@ -21,4 +21,21 @@ $(document).ready(function(){
 		})
 
 	})
-})
+
+$('#user_link').click(searchUser);
+});
+
+function searchUser(e){
+	$('#imgLoading').fadeIn();
+	e.preventDefault();
+	$('#result2').html('');
+	var u = $('#user_name').val();
+$.get('https://api.github.com/search/users?q='+u,function(data){
+$('#imgLoading').fadeOut();
+$.each(data.items, function(i, item){
+			$('#result2').append(`<a href= "${item.html_url}">${item.login}</a><br>`)});
+
+	}).fail(function(){
+		alert("Error!!");
+	});
+}
